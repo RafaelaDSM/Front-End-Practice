@@ -152,3 +152,36 @@ main .container >.item .pesquisar i {
     margin-top: 15px;
     cursor: pointer;
 }
+
+footer {
+    background-color: var(--cor3);
+    color: var(--cor4);
+    padding: 50px;
+    display: flex;
+    gap: 2rem;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    flex: 1;
+}
+
+footer h3 {
+    margin-bottom: 15px; 
+}
+
+footer .contato {
+    margin-top: 25px;
+}
+
+footer .logo {
+    align-self: flex-end;
+    padding-top: 130px;
+    margin-left: 15px;
+}
+
+footer i {
+    margin-bottom: 20px;
+}
