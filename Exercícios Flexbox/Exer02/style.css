@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: gray;
+}
+
+.container {
+    display: flex;
+    flex-direction: row; /* Esse código não é necessario, porque o padrão já é row.*/
+    justify-content: space-around; /* Aqui o ideal de mercado é que seja space-between e ir ajustando o espaço com padding. */
+    align-items: center;
+}
+
+img {
+    width: 130px;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+    font-size: 1.4rem;
+}
+
+.menu  a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+input {
+    padding: 10px;
+    border-radius: 8px;
+}
+
+input:hover {
+    background-color: blue;
+    /*Aqui para melhorar o UX poderia ter colocado cursor: pointer; e um transition: background-color 0.3s; */
+}
