@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.892);
+}
+
+main .container {
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+main .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(128, 128, 128, 0.744);
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 2px 2px grey;
+    width: 300px;
+}
+
+main .card p {
+    padding-top: 5px;
+    padding-bottom: 8px;
+}
+
+main .card  button {
+    font-size: 15px;
+    padding: 3px;
+    border-radius: 3px;
+    border: none;
+}
+
+main .card button:hover {
+    cursor: pointer;
+    background-color: rgba(7, 248, 216, 0.325);
+}
