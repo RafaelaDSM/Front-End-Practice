@@ -1,0 +1,126 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --body: #e5e2e2;
+    --header-footer: #222;
+    --hf-color: rgb(255,255,255);
+    --content-p: #555;
+    --cta: #222222a7;
+    --cta-hover: #000;
+    --card: #bcbbbb;
+}
+
+body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    line-height: 1.6;
+
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto auto;
+    background: var(--body);
+}
+
+/* GRID PRINCIPAL */
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* FLEX PARA ALINHAMENTO */
+.header, .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--header-footer);
+    color: var(--hf-color);
+    padding: 13px;
+}
+
+.content, .aside {
+    background: var(--hf-color);
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.content h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.content p {
+    font-size: 1.1rem;
+    color: var(--content-p);
+}
+
+.cta {
+    margin-top: 15px;
+    padding: 12px 20px;
+    background: var(--cta);
+    color: var(--hf-color);
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.cta:hover {
+    background: var(--cta-hover);
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.card {
+    background: var(--card);
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    cursor: pointer;
+    transform: translateY(-5px);
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+}
