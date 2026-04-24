@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-fundo: #00c1b5;
+    --cor-fonte01: #000000;
+    --cor-fonte02: #ffffff;
+}
+
+body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    background-color: var(--cor-fundo);
+    margin: 15px;
+}
+
