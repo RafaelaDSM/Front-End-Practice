@@ -18,12 +18,3 @@ body {
     margin: 15px;
     display: flex;
 }
-
-.header {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-article {
-    padding: 150px;
-}
