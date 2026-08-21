@@ -47,29 +47,29 @@ a:hover {
     color: var(--cor-azul);
 }
 
-.botoes {
+.buttons {
     display: flex;
     gap: 15px;
 }
 
-button {
+.btn-top {
     padding: 10px;
     border: 1px solid #00b289;
     border-radius: 5px;
     cursor: pointer;
 }
 
-.conecte-se {
+#log-in {
     color: var(--cor-azul);
     background-color: var(--cor-branca);
 }
 
-.conecte-se:hover {
+#log-in:hover {
     color: var(--cor-branca);
     background-color: var(--cor-azul);
 }
 
-.comece-gratis {
+#start-free-top {
     color: var(--cor-branca);
     background-color: var(--cor-azul);
 }
@@ -78,33 +78,26 @@ main {
     padding: 20px 50px;
 }
 
-.precos-header {
+.princing-header {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 50px;
 }
 
-.precos-header h2 {
+.princing-header h2 {
     font-size: 2rem;
     color: rgba(76, 82, 90, 0.926);
 }
 
-.precos-header .anual {
+.princing-header .annual {
     color: rgba(76, 82, 90, 0.866); 
 }
 
-.opcao-planos {
+.plan-option {
     display: flex;
     align-items: center;
     gap: 15px;
-}
-
-.opcao-planos img {
-    position: relative;
-    top: -30px;
-    left: -120px;
-    bottom: 20px;
 }
 
 .toggle {
