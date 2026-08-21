@@ -21,9 +21,42 @@
             <ul>
                 <li class="menu">
                     <a href="#">Product<span class="material-symbols-outlined"> stat_minus_1</span></a>
+                    <details>
+                        <summary><strong>Bonsai Workflow</strong></summary>
+                        <p>Look professional, win more clients and manage your business from one place</p>
+                    </details>
+                    <details>
+                        <summary><strong>Bonsai Tax</strong></summary>
+                        <p>Track expenses, maximize tax write-offs, and estimate taxes without the headache</p>
+                    </details>
+                    <details>
+                        <summary><strong>Bonsai Cash</strong></summary>
+                        <p>Bonsai's all-in-one financial hub: No fees and lightning fast payouts</p>
+                    </details>
                 </li>
                 <li class="menu">
                     <a href="#">Templates<span class="material-symbols-outlined"> stat_minus_1</span></a>
+                    <details>
+                        <summary>Contract Templates</summary>
+                    </details>
+                    <details>
+                        <summary>Proposal Templates</summary>
+                    </details>
+                    <details>
+                        <summary>Invoice Templates</summary>
+                    </details>
+                    <details>
+                        <summary>Agreement Templates</summary>
+                    </details>
+                    <details>
+                        <summary>Quote Templates</summary>
+                    </details>
+                    <details>
+                        <summary>Scope of Work Template</summary>
+                    </details>
+                    <details>
+                        <summary>Brief Template</summary>
+                    </details>
                 </li>
                 <li>
                     <a href="#">Pricing</a>
@@ -34,8 +67,12 @@
             </ul>
         </nav>
         <div class="buttons">
-            <button class="btn-top" id="log-in"><strong>LOG IN</strong></button>
-            <button class="btn-top" id="start-free-top" id="comece-gratis"><strong>START FREE</strong></button>
+            <button class="btn-top btn-login">
+                <strong>LOG IN</strong>
+            </button>
+            <button class="btn-top btn-start">
+                <strong>START FREE</strong>
+            </button>
         </div>
     </header><!-- FIM DO CABEÇALHO -->
     <main>
@@ -45,7 +82,7 @@
 
                     <div class="plan-option">
                         <span>MONTHLY</span>
-                        <button class="toggle">
+                        <button aria-pressed="false" class="toggle">
                             <span class="circle"></span>
                         </button>
                         <span class="annual">YEARLY</span>

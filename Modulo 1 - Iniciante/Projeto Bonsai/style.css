@@ -15,24 +15,24 @@
     --fonte-header: "Dosis", sans-serif;
 }
 
-header {
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
 }
 
-.logo img {
+.header a {
     width: 170px;
 }
 
-ul {
+.main-menu ul {
     display: flex;
     list-style: none;
     gap: 25px;
 }
 
-a {
+.main-menu a {
     display: inline-flex;
     align-items: center;
     gap: 5px;
@@ -43,7 +43,7 @@ a {
     font-size: 1.1rem;
 }
 
-a:hover {
+.main-menu a:hover {
     color: var(--cor-azul);
 }
 
@@ -52,24 +52,27 @@ a:hover {
     gap: 15px;
 }
 
-.btn-top {
+.btn-login {
     padding: 10px;
-    border: 1px solid #00b289;
+    border: 1px solid var(--cor-azul);
     border-radius: 5px;
     cursor: pointer;
-}
 
-#log-in {
     color: var(--cor-azul);
     background-color: var(--cor-branca);
 }
 
-#log-in:hover {
+.btn-login:hover {
     color: var(--cor-branca);
     background-color: var(--cor-azul);
 }
 
-#start-free-top {
+.btn-start {
+    padding: 10px;
+    border: 1px solid var(--cor-azul);
+    border-radius: 5px;
+    cursor: pointer;
+
     color: var(--cor-branca);
     background-color: var(--cor-azul);
 }
@@ -78,19 +81,19 @@ main {
     padding: 20px 50px;
 }
 
-.princing-header {
+.pricing-header {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 50px;
 }
 
-.princing-header h2 {
+.pricing-header h2 {
     font-size: 2rem;
     color: rgba(76, 82, 90, 0.926);
 }
 
-.princing-header .annual {
+.pricing-header .annual {
     color: rgba(76, 82, 90, 0.866); 
 }
 
@@ -115,7 +118,7 @@ main {
     width: 24px;
     height: 24px;
 
-    background-color: white;
+    background-color: var(--cor-branca);
     border-radius: 50%;
     position: absolute;
 
