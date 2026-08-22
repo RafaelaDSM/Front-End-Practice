@@ -22,8 +22,9 @@
     padding: 20px 50px;
 }
 
-.header a {
+.logo img {
     width: 170px;
+    display: block;
 }
 
 .main-menu ul {
