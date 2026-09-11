@@ -12,7 +12,7 @@
     --cor-branca: #fff;
     --cor-amarela: #f8db62;
 
-    --cor-card: #fbfcff;
+    --cor-card: #e5e5e5;
 
     --fonte-header: "Dosis", sans-serif;
 }
@@ -21,18 +21,57 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
     padding: 20px 50px;
+    position: relative;
+}
+
+.logo {
+    flex-shrink: 0;
 }
 
 .logo img {
     width: 170px;
+    max-width: 100%;
     display: block;
+}
+
+.menu-toggle {
+    display: none;
+    width: 46px;
+    height: 46px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 26px;
+    height: 2px;
+    background-color:  var(--cor-roxa);
+    border-radius: 2px;
+}
+
+.main-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
 }
 
 .main-menu ul {
     display: flex;
     list-style: none;
     gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .main-menu a {
@@ -49,29 +88,28 @@
 .buttons {
     display: flex;
     gap: 15px;
+    align-items: center;
+    justify-content: center;
 }
 
-.btn-login {
-    padding: 10px;
+.btn-login, .btn-start {
+    padding: 10px 16px;
     border: 1px solid var(--cor-azul);
     border-radius: 5px;
     cursor: pointer;
+}
 
+.btn-login {
     color: var(--cor-azul);
     background-color: var(--cor-branca);
 }
 
-.btn-login:hover {
+.btn-start {
     color: var(--cor-branca);
     background-color: var(--cor-azul);
 }
 
-.btn-start {
-    padding: 10px;
-    border: 1px solid var(--cor-azul);
-    border-radius: 5px;
-    cursor: pointer;
-
+.btn-login:hover {
     color: var(--cor-branca);
     background-color: var(--cor-azul);
 }
@@ -130,18 +168,93 @@ main {
     justify-content: center;
     gap: 30px;
     padding: 30px;
+    flex-wrap: wrap;
 }
 
 .card {
-    border: 10px solid var(--cor-card);
+    border: 1px solid var(--cor-card);
     box-shadow: 0 0 68px 0 rgba(14, 13, 13, 0.115);
     border-radius: 5px;
     padding: 15px;
 
+    display: flex;
+    flex-direction: column;
     flex: 1;
+    
 
 }
 
 .card ul {
     list-style: none;
+}
+
+@media (max-width: 868px) {
+    .header {
+        justify-content: space-between;
+        padding: 18px 20px;
+    }
+
+    .logo,.buttons {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .menu-toggle {
+        display: flex;
+        order: 2;
+    }
+
+    .main-menu {
+        display: none;
+        width: 100%;
+        order: 3;
+        flex-basis: 100%;
+    }
+
+    .main-menu.open {
+        display: block;
+    }
+
+    .main-menu ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+        padding-top: 20px;
+    }
+
+    .buttons {
+        width: 100%;
+        justify-content: flex-start;
+        margin-top: 15px;
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: flex;
+        order: 2;
+    }
+}
+
+@media (max-width: 560px) {
+    .header {
+        padding: 18px 16px;
+    }
+
+    .main-menu ul {
+        justify-content: center;
+    }
+
+    .main-menu a {
+        font-size: 1rem;
+    }
+
+    .buttons {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .btn-login,
+    .btn-start {
+        width: 100%;
+    }
 }
