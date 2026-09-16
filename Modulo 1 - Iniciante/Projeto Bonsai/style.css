@@ -127,11 +127,17 @@ main {
     justify-content: center;
     align-items: center;
     gap: 50px;
+    padding-top: 120px;
+    padding-bottom: 50px;
+    position: relative;
 }
 
 .pricing-header h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    font-weight: 500;
     color: rgba(76, 82, 90, 0.926);
+    margin: 0;
+    line-height: 1;
 }
 
 .pricing-header .annual {
@@ -141,7 +147,14 @@ main {
 .plan-option {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 16px;
+    position: relative;
+}
+
+.plan-option .img {
+    position: absolute;
+    top: -35px;
+    right: -25px;   
 }
 
 .toggle {
@@ -242,6 +255,17 @@ main {
     .main-menu .buttons .btn-login,
     .main-menu .buttons .btn-start {
         width: 100%;
+    }
+}
+
+@media (max-width: 652px) {
+    .pricing-header {
+        display: flex;
+        justify-content: center;
+    }
+
+    .pricing-header h2 {
+        font-size: 2rem;
     }
 }
 
