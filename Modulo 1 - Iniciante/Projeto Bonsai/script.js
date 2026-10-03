@@ -1,3 +1,4 @@
+// MENU MOBILE
 const menuToggle = document.querySelector('.menu-toggle');
 const mainMenu = document.querySelector('.main-menu');
 
@@ -12,3 +13,15 @@ if (menuToggle && mainMenu) {
         );
     });
 }
+
+// FAQ
+const faqItems = document.querySelectorAll('.faq-item');
+
+faqItems.forEach((item) => {
+    const button = item.querySelector('button');
+    const answer = item.querySelector('p');
+
+    button.addEventListener('click', () => {
+        answer.classList.toggle('open');
+    });
+});
