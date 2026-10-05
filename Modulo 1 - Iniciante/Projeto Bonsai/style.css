@@ -1,9 +1,12 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Dosis:wght@200..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    --fonte: "Dosis", sans-serif;
 }
 
 :root {
@@ -15,7 +18,7 @@
     --cor-card: #e5e5e5;
     --cor-cta: #f2faff;
 
-    --fonte-header: "Dosis", sans-serif;
+    --fonte: "Dosis", sans-serif;
 }
 
 .header {
@@ -426,16 +429,16 @@ main::before {
 .faq {
     display: flex;
     flex-direction: column;
-    max-width: 1140px;
     margin: 0 auto;
     max-width: 970px;
+    padding-bottom: 150px;
 }
 
 .faq > h3 {
     display: flex;
     justify-content: center;
     color: var(--cor-verde-turquesa);
-    font-size: 43px;
+    font-size: 2.5rem;
     line-height: 36px;
     font-weight: 800;
     padding: 0px 0px 65px;
@@ -449,7 +452,7 @@ main::before {
     border: none;
     background: none;
     font-weight: 600;
-    font-size: 28px;
+    font-size: 1.5rem;
     line-height: 130%;
     color: rgb(76, 77, 95);
     cursor: pointer;
@@ -468,6 +471,84 @@ main::before {
 
 .faq-item p.open {
     display: block;
+}
+
+footer {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 60px 30px 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+
+    /*padding-top: 80px;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: space-around;*/
+}
+
+footer h3 {
+    color: rgba(0, 0, 0, 0.793);
+    font-size: 1.65rem;
+    font-weight: 600;
+}
+
+footer h3 + ul {
+    margin-top: 60px;
+}
+
+footer .pricing {
+    margin-top: 38px;
+}
+
+footer .pricing h3 {
+    margin-bottom: 10px;
+    color: var(--cor-verde-turquesa);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+footer .pricing h3 + ul {
+    margin-top: 0;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    line-height: 1.35;
+}
+
+footer a {
+    color: rgb(76, 77, 95);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--cor-verde-turquesa);
+}
+
+footer .templates {
+    margin-top: 28px;
+}
+
+footer .templates li {
+    margin-bottom: 10px;
+}
+
+footer .templates a {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+footer .material-symbols-outlined {
+    font-size: 18px;
 }
 
 @media (max-width: 868px) {
