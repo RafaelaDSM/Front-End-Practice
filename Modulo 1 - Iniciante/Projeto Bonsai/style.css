@@ -112,9 +112,9 @@
     background-color: var(--cor-branca);
 }
 
-.btn-start {
-    color: var(--cor-branca);
-    background-color: var(--cor-verde-turquesa);
+.btn-login a {
+    text-decoration: none;
+    color: var(--cor-verde-turquesa);
 }
 
 .btn-login:hover {
@@ -122,8 +122,21 @@
     background-color: var(--cor-verde-turquesa);
 }
 
+.btn-login:hover a {
+    color: var(--cor-branca);
+}
+
+.btn-start {
+    color: var(--cor-branca);
+    background-color: var(--cor-verde-turquesa);
+}
+
+.btn-start a {
+    text-decoration: none;
+    color: var(--cor-branca);
+}
+
 main {
-    /*padding: 20px 50px;*/
     position: relative;
     overflow: hidden;
 }
