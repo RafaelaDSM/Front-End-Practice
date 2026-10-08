@@ -6,7 +6,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    --fonte: "Dosis", sans-serif;
 }
 
 :root {
@@ -18,16 +17,23 @@
     --cor-card: #e5e5e5;
     --cor-cta: #f2faff;
 
-    --fonte: "Dosis", sans-serif;
+    --fonte: "DM Sans", sans-serif;
+    --fonte-header: "DM Sans", sans-serif;
+}
+
+body {
+    font-family: var(--fonte);
 }
 
 .header {
+    position: relative;
+    z-index: 10;
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
     gap: 32px;
     padding: 30px 0;
-    max-width: 1400px;
+    max-width: 1120px;
     width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
@@ -91,6 +97,192 @@
     color: var(--cor-roxa);
     font-family: var(--fonte-header);
     font-size: 1.1rem;
+}
+
+.nav-dropdown {
+    position: static;
+}
+
+.nav-dropdown > button {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    border: 0;
+    background: transparent;
+    color: var(--cor-roxa);
+    font-family: var(--fonte-header);
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.nav-dropdown.is-open .product-dropdown,
+.nav-dropdown:hover .product-dropdown {
+    display: grid;
+}
+
+.nav-dropdown.is-open .templates-dropdown,
+.nav-dropdown:hover .templates-dropdown {
+    display: grid;
+}
+
+.product-dropdown {
+    position: absolute;
+    z-index: 20;
+    top: calc(100% - 30px);
+    left: calc(50% - 328px);
+
+    width: min(352px, calc(100vw - 40px));
+    min-height: 528px;
+    padding: 0;
+    background: var(--cor-branca);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.10);
+
+    display: none;
+    grid-template-columns: 1fr;
+    transition: width 180ms ease;
+}
+
+.product-dropdown.workflow-active {
+    width: min(990px, calc(100vw - 40px));
+    grid-template-columns: 36% 64%;
+}
+
+.templates-dropdown {
+    position: absolute;
+    z-index: 20;
+    top: calc(100% - 30px);
+    left: calc(50% - 80px);
+    transform: translateX(-50%);
+    width: min(590px, calc(100vw - 40px));
+    padding: 28px 32px;
+    background: var(--cor-branca);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.10);
+    display: none;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 26px 34px;
+}
+
+.templates-group h3 {
+    margin-bottom: 12px;
+    color: var(--cor-roxa);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.templates-group a {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 9px 0;
+    border-bottom: 1px solid rgba(76, 77, 95, 0.10);
+    color: var(--cor-roxa);
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.templates-group a:hover {
+    color: var(--cor-verde-turquesa);
+}
+
+.templates-group a .material-symbols-outlined {
+    font-size: 18px;
+}
+
+.product-featured {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-featured > div {
+    position: relative;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    padding: 24px 40px;
+}
+
+.product-featured > div > a {
+    position: relative;
+    display: block;
+    width: 100%;
+    color: var(--cor-roxa);
+    text-decoration: none;
+}
+
+.product-featured > div:hover,
+.workflow-highlight {
+    background: #fafafa;
+}
+
+.product-featured h3 {
+    margin-bottom: 8px;
+    font: 400 1.3rem Georgia, serif;
+}
+
+.product-featured p {
+    max-width: 300px;
+    line-height: 1.45;
+}
+
+.workflow-highlight > a > span {
+    position: absolute;
+    top: 50%;
+    right: -18px;
+    transform: translateY(-50%);
+}
+
+.product-tax {
+    border-top: 1px solid #ddd;
+}
+
+.product-cash {
+    border-top: 1px solid #ddd;
+}
+
+.workflow-resources {
+    display: none;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px 36px;
+    align-content: center;
+    padding: 30px;
+}
+
+.product-dropdown.workflow-active .workflow-resources {
+    display: grid;
+}
+
+.workflow-resources a {
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    grid-template-rows: auto auto;
+    column-gap: 8px;
+    align-content: start;
+    color: var(--cor-roxa);
+    text-decoration: none;
+}
+
+.workflow-resources a > .material-symbols-outlined {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    align-self: start;
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+.workflow-resources h4 {
+    grid-column: 2;
+    grid-row: 1;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.workflow-resources p {
+    grid-column: 2;
+    grid-row: 2;
+    margin-top: 6px;
+    color: #777;
+    font-size: 0.8rem;
+    line-height: 1.25;
 }
 
 .buttons {
@@ -603,6 +795,42 @@ footer .material-symbols-outlined {
         width: 100%;
     }
 
+    .main-menu .nav-dropdown {
+        width: 100%;
+    }
+
+    .main-menu .nav-dropdown > button {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .product-dropdown,
+    .templates-dropdown {
+        position: static;
+        left: auto;
+        top: auto;
+        transform: none;
+        width: 100%;
+        min-height: 0;
+        margin-top: 10px;
+        box-shadow: none;
+    }
+
+    .product-dropdown.workflow-active {
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+
+    .templates-dropdown {
+        grid-template-columns: 1fr;
+        padding: 16px;
+    }
+
+    .workflow-resources {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
     .main-menu .buttons {
         display: flex;
         flex-direction: column;
@@ -614,6 +842,16 @@ footer .material-symbols-outlined {
     .main-menu .buttons .btn-login,
     .main-menu .buttons .btn-start {
         width: 100%;
+    }
+}
+
+@media (max-width: 1200px) and (min-width: 869px) {
+    .product-dropdown {
+        left: 20px;
+    }
+
+    .templates-dropdown {
+        left: 50%;
     }
 }
 

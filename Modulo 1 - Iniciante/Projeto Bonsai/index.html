@@ -10,6 +10,7 @@
 </head>
 <body>
     <header class="header">
+
         <a href="/" class="logo">
             <img src="./imagens/logo.png" alt="Logo">
         </a>
@@ -23,11 +24,12 @@
         <nav class="main-menu" aria-label="Menu principal">
             <ul>
                 <li class="nav-dropdown">
-                    <button type="button" aria-expanded="false">
+                    <button type="button" aria-expanded="false" aria-controls="product-dropdown">
                         Product<span class="material-symbols-outlined"> stat_minus_1</span>
                     </button>
-                    <div class="product-dropdown">
-                        <div class="product-workflow">
+
+                    <div class="product-dropdown" id="product-dropdown">
+                        <div class="product-featured">
                             <div class="workflow-highlight">
                                 <a href="#">
                                     <h3>Bonsai Workflow</h3>
@@ -37,110 +39,168 @@
                                     <span class="material-symbols-outlined">chevron_right</span>
                                 </a>
                             </div>
+                            
+                            <div class="product-tax">
+                                <a href="https://web.archive.org/web/20221127212857/https://www.hellobonsai.com/bonsai-tax" target="_blank">
+                                    <h3>Bonsai Tax</h3>
+                                    <p>
+                                        Maximize write-offs, and estimate and save for 1099 taxes
+                                    </p>
+                                </a>
                             </div>
-                            <div class="workflow-resources">
-                                <a href="https://web.archive.org/web/20221127212859/https://www.hellobonsai.com/invoicing" target="_blank">
-                                    <span class="material-symbols-outlined">request_page</span>
-                                    <h4>Invoices</h4>
-                                    <p>
-                                        Get paid faster with automatic invoicing online payments and more
-                                    </p>
-                                </a>
-                                
-                                <a href="https://web.archive.org/web/20221127205149/https://www.hellobonsai.com/freelance-proposals" target="_blank">
-                                    <span class="material-symbols-outlined">text_ad</span>
-                                    <h4>Proposals</h4>
-                                    <p>
-                                        Create client-winning proposals with open receipts, custom packages and electronic approvals
-                                    </p>
-                                </a>
 
-                                <a href="https://web.archive.org/web/20221127205231/https://www.hellobonsai.com/contracts" target="_blank">
-                                    <span class="material-symbols-outlined">contract</span>
-                                    <h4>Contracts</h4>
+                            <div class="product-cash">
+                                <a href="https://web.archive.org/web/20221127212952/https://www.hellobonsai.com/bonsai-cash" target="_blank">
+                                    <h3>Bonsai Cash</h3>
                                     <p>
-                                        Protect your business with fully-customizable contract templates. Edit and e-sign hassle free
-                                    </p>
-                                </a>
-
-                                <a href="https://web.archive.org/web/20221127205111/https://www.hellobonsai.com/freelance-crm" target="_blank">
-                                    <span class="material-symbols-outlined">group</span>
-                                    <h4>Client CRM</h4>
-                                    <p>
-                                        Add leads, manage existing clients and track projects easily from one place
-                                    </p>
-                                </a>
-                                <a href="https://web.archive.org/web/20221127205153/https://www.hellobonsai.com/freelance-forms" target="_blank">
-                                    <span class="material-symbols-outlined">assignment</span>
-                                    <h4>Forms & Automations</h4>
-                                    <p>
-                                        Boost client intake and automate feedback with custom web forms and questionnaires
-                                    </p>
-                                </a>
-
-                                <a href="https://web.archive.org/web/20221127205157/https://www.hellobonsai.com/freelance-time-tracking" target="_blank">
-                                    <span class="material-symbols-outlined">schedule</span>
-                                    <h4>Time Tracking</h4>
-                                    <p>
-                                        Stay organized with Bonsai`s all-in-one time tracker, automated timesheets and billing system
-                                    </p>
-                                </a>
-
-                                <a href="https://web.archive.org/web/20221127212843/https://www.hellobonsai.com/freelance-accounting-software" target="_blank">
-                                    <span class="material-symbols-outlined">receipt</span>
-                                    <h4>Accounting</h4>
-                                    <p>
-                                        Manage your finances easily with income reports, expense tracking, tax reminders and more
-                                    </p>
-                                </a>
-
-                                <a href="https://web.archive.org/web/20221127205115/https://www.hellobonsai.com/freelance-task-management" target="_blank">
-                                    <span class="material-symbols-outlined">order_approve</span>
-                                    <h4>Task Tracking</h4>
-                                    <p>
-                                        Stress-free task management with project templates and integrated timesheets
+                                        Manage your money with a no-fee business account
                                     </p>
                                 </a>
                             </div>
                         </div>
 
-                        <div class="product-tax">
-                            <a href="https://web.archive.org/web/20221127212857/https://www.hellobonsai.com/bonsai-tax" target="_blank">
-                                <h3>Bonsai Tax</h3>
+                        <div class="workflow-resources">
+                            <a href="https://web.archive.org/web/20221127212859/https://www.hellobonsai.com/invoicing" target="_blank">
+                                <span class="material-symbols-outlined">request_page</span>
+                                <h4>Invoices</h4>
                                 <p>
-                                    Maximize write-offs, and estimate and save for 1099 taxes
+                                    Get paid faster with automatic invoicing online payments and more
                                 </p>
                             </a>
-                        </div>
-
-                        <div class="product-cash">
-                            <a href="https://web.archive.org/web/20221127212952/https://www.hellobonsai.com/bonsai-cash" target="_blank">
-                                <h3>Bonsai Cash</h3>
+                                
+                            <a href="https://web.archive.org/web/20221127205149/https://www.hellobonsai.com/freelance-proposals" target="_blank">
+                                <span class="material-symbols-outlined">text_ad</span>
+                                <h4>Proposals</h4>
                                 <p>
-                                    Manage your money with a no-fee business account
+                                    Create client-winning proposals with open receipts, custom packages and electronic approvals
+                                </p>
+                            </a>
+
+                            <a href="https://web.archive.org/web/20221127205231/https://www.hellobonsai.com/contracts" target="_blank">
+                                <span class="material-symbols-outlined">contract</span>
+                                <h4>Contracts</h4>
+                                <p>
+                                    Protect your business with fully-customizable contract templates. Edit and e-sign hassle free
+                                </p>
+                            </a>
+
+                            <a href="https://web.archive.org/web/20221127205111/https://www.hellobonsai.com/freelance-crm" target="_blank">
+                                <span class="material-symbols-outlined">group</span>
+                                <h4>Client CRM</h4>
+                                <p>
+                                    Add leads, manage existing clients and track projects easily from one place
+                                </p>
+                            </a>
+
+                            <a href="https://web.archive.org/web/20221127205153/https://www.hellobonsai.com/freelance-forms" target="_blank">
+                                <span class="material-symbols-outlined">assignment</span>
+                                <h4>Forms & Automations</h4>
+                                <p>
+                                    Boost client intake and automate feedback with custom web forms and questionnaires
+                                </p>
+                            </a>
+
+                            <a href="https://web.archive.org/web/20221127205157/https://www.hellobonsai.com/freelance-time-tracking" target="_blank">
+                                <span class="material-symbols-outlined">schedule</span>
+                                <h4>Time Tracking</h4>
+                                <p>
+                                    Stay organized with Bonsai`s all-in-one time tracker, automated timesheets and billing system
+                                </p>
+                            </a>
+
+                            <a href="https://web.archive.org/web/20221127212843/https://www.hellobonsai.com/freelance-accounting-software" target="_blank">
+                                <span class="material-symbols-outlined">receipt</span>
+                                <h4>Accounting</h4>
+                                <p>
+                                    Manage your finances easily with income reports, expense tracking, tax reminders and more
+                                </p>
+                            </a>
+
+                            <a href="https://web.archive.org/web/20221127205115/https://www.hellobonsai.com/freelance-task-management" target="_blank">
+                                <span class="material-symbols-outlined">order_approve</span>
+                                <h4>Task Tracking</h4>
+                                <p>
+                                    Stress-free task management with project templates and integrated timesheets
                                 </p>
                             </a>
                         </div>
                     </div>
                 </li>
+
                 <li class="nav-dropdown">
                     <button type="button" aria-expanded="false">
                         Templates<span class="material-symbols-outlined"> stat_minus_1</span>
                     </button>
+
+                    <div class="templates-dropdown">
+                        <ul class="templates-list">
+                            <li>
+                                <a href="https://web.archive.org/web/20221127212937/https://www.hellobonsai.com/templates/contracts" target="_blank">
+                                    <span class="material-symbols-outlined">contract</span>
+                                    <span>Contract Templates</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://web.archive.org/web/20221127205046/https://www.hellobonsai.com/templates/proposals" target="_blank">
+                                    <span class="material-symbols-outlined">text_ad</span>
+                                    <span>Proposal Templates</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://web.archive.org/web/20221117021714/https://www.hellobonsai.com/templates/invoices" target="_blank">
+                                    <span class="material-symbols-outlined">request_page</span>
+                                    <span>Invoice Templates</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://web.archive.org/web/20221127212929/https://www.hellobonsai.com/templates/agreements" target="_blank">
+                                    <span class="material-symbols-outlined">contract</span>
+                                    <span>Agreement Templates</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://web.archive.org/web/20221127205234/https://www.hellobonsai.com/templates/quotes" target="_blank">
+                                    <span class="material-symbols-outlined">contract</span>
+                                    <span>Quote Templates</span>   
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://web.archive.org/web/20221127205219/https://www.hellobonsai.com/templates/scope-of-work" target="_blank">
+                                    <span class="material-symbols-outlined">schedule</span>
+                                    <span>Scope of Work Templates</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <span class="material-symbols-outlined">contract</span>
+                                    <span>Brief Templates</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
+
                 <li>
                     <a href="#">Pricing</a>
                 </li>
+
                 <li>
                     <a href="https://web.archive.org/web/20221128192908/https://www.hellobonsai.com/reviews" target="_blank">Reviews</a>
                 </li>
             </ul>
-        </nav>
+        </nav> <!-- FIM DA NAV -->
 
         <div class="buttons">
             <button class="btn-top btn-login">
                 <a href="https://web.archive.org/web/20221117021714/https://app.hellobonsai.com/users/sign_in" target="_blank"><strong>LOG IN</strong></a>
             </button>
+
             <button class="btn-top btn-start">
                 <a href="https://web.archive.org/web/20221117021714/https://app.hellobonsai.com/users/sign_in"><strong>START FREE</strong></a>
             </button>
@@ -176,6 +236,7 @@
                         <li><span class="material-symbols-outlined">check</span>Expense Tracking</li>
                         <li><span class="material-symbols-outlined">check</span>Up to 5 Project Collaborators</li>
                     </ul>
+
                     <a href="#" class="btn">
                         <strong>START FREE</strong>
                     </a>
@@ -198,6 +259,7 @@
                         <li><span class="material-symbols-outlined">check</span>Zapier Integration</li>
                         <li><span class="material-symbols-outlined">check</span>Up to 15 Project Collaborators</li>
                     </ul>
+
                     <a href="#" class="btn">
                         <strong>START FREE</strong>
                     </a>
@@ -220,6 +282,7 @@
                         <li><span class="material-symbols-outlined">check</span>Unlimited Subcontractors</li>
                         <li><span class="material-symbols-outlined">check</span>Unlimited Project Collaborators</li>
                     </ul>
+
                     <a href="#" class="btn">
                         <strong>START FREE</strong>
                     </a>
@@ -249,6 +312,7 @@
                     <h3>Bonsai Tax</h3>
                     <p>Track expenses, identify write-offs, and estimate quarterly taxes easily.</p>
                     <p><strong>LEARN MORE &gt;</strong></p>
+
                     <div class="price-addon">
                         <span class="value">$10</span>
                         <span>/MONTH</span>
@@ -262,6 +326,7 @@
                 <p>It's <strong>your</strong> business.</p>
                 <p>We're here to help it grow.</p>
             </div>
+
             <a href="#" class="btn-cta">
                 <strong>START FREE</strong>
             </a>
@@ -274,6 +339,7 @@
                     How does the free trial work?
                     <span class="material-symbols-outlined">keyboard_arrow_down</span>
                 </button>
+
                 <p id="faq-answer-1">
                     When you start your trial with Bonsai you'll receive full, unlimited access to all of Bonsai's Workflow or Workflow Plus Features! You will need to enter your credit card information to begin your trial, but don't worry - we won't charge you anything until the subscription ends! If you wish to cancel at any time during the trial period, you can do so through your Subscriptions Settings Page.
                 </p>
@@ -284,6 +350,7 @@
                     Can I change plans anytime?
                     <span class="material-symbols-outlined">keyboard_arrow_down</span>
                 </button>
+
                 <p id="faq-answer-2">
                     Yes, you can from within your account. If you have already subscribed to a plan, or want to downgrade or upgrade your current one, you can do this by going to your "Settings" and "Subscription".
                 </p>
@@ -294,6 +361,7 @@
                     How do I pause my Bonsai subscription?
                     <span class="material-symbols-outlined">keyboard_arrow_down</span>
                 </button>
+
                 <p id="faq-answer-3">
                     We totally understand that with the nature of freelancing, work ebbs and flows so you might not always need your Bonsai subscription to remain active! The good news is that you can cancel or pause your monthly subscription at any time without penalty. Once cancelled, you'll be able to continue logging in to access all your documents and even continue to use our free features, like Time Tracking! In order to cancel your subscription, login to your Bonsai account.
                 </p>
@@ -304,6 +372,7 @@
                     What is your refund policy?
                     <span class="material-symbols-outlined">keyboard_arrow_down</span>
                 </button>
+
                 <p id="faq-answer-4">
                     If you contact us within 2 weeks of being charged for your subscription, we will be happy to issue a refund for you!Beyond those 2 weeks, you will need to cancel or modify the subscription from the Subscriptions Tab in Settings to avoid future charges, but refunds will not be issued. This applies to both monthly and annual plans.
                 </p>
