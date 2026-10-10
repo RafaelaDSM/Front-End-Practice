@@ -151,15 +151,44 @@ body {
     position: absolute;
     z-index: 20;
     top: calc(100% - 30px);
-    left: calc(50% - 80px);
+    left: 50%;
+    /*left: calc(50% - 80px);*/
     transform: translateX(-50%);
-    width: min(590px, calc(100vw - 40px));
+    width: min(780px, calc(100vw - 40px));
+    /*width: min(590px, calc(100vw - 40px));*/
     padding: 28px 32px;
     background: var(--cor-branca);
     box-shadow: 0 12px 35px rgba(0, 0, 0, 0.10);
     display: none;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 26px 34px;
+}
+
+// Adicionados templates-list, templates-list li e templates-list a 
+.templates-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    width: 300px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.templates-list li {
+    width: 100%;
+}
+
+.templates-list a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: var(--cor-roxa);
+    font-family: var(--fonte);
+    font-size: 1rem;
+    text-decoration: none;
 }
 
 .templates-group h3 {
