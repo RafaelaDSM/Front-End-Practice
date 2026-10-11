@@ -164,7 +164,6 @@ body {
     gap: 26px 34px;
 }
 
-// Adicionados templates-list, templates-list li e templates-list a 
 .templates-list {
     display: flex;
     flex-direction: column;
